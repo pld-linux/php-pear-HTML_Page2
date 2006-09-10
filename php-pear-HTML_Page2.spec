@@ -5,7 +5,7 @@
 %define		_pearname	HTML_Page2
 
 Summary:	%{_pearname} - base class for XHTML page generation
-Summary(pl):	%{_pearname} - klasa bazowa do genrowania dokumentów XHTML
+Summary(pl):	%{_pearname} - klasa bazowa do generowania dokumentów XHTML
 Name:		php-pear-%{_pearname}
 Version:	0.5.0
 Release:	2
@@ -44,8 +44,8 @@ Ideas for use:
 In PEAR status of this package is: %{_status}.
 
 %description -l pl
-Klasa PEAR::HTML_Page2 dostarcza prostego interfejsu do generowania
-stron zgodnych z XHTML.
+Klasa PEAR::HTML_Page2 dostarcza prosty interfejs do generowania stron
+zgodnych z XHTML.
 - wsparcie dla praktycznie wszystkich typów HTML, od HTML 2.0 przez
   XHTML 1.1 i XHTML Basic 1.0 do podstawowego wsparcia dla XHTML 2.0
 - wsparcie dla przestrzeni nazw
@@ -92,5 +92,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log docs/%{_pearname}/{examples/Page2_NoDoctype.php,examples/Page2_Simple.php,examples/Page2_Complex.php}
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/HTML/Page2.php
+%dir %{php_pear_dir}/HTML/Page2
 %{php_pear_dir}/HTML/Page2/Doctypes.php
 %{php_pear_dir}/HTML/Page2/Namespaces.php
