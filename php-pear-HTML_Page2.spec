@@ -5,7 +5,7 @@
 %define		_pearname	HTML_Page2
 
 Summary:	%{_pearname} - base class for XHTML page generation
-Summary(pl):	%{_pearname} - klasa bazowa do generowania dokumentów XHTML
+Summary(pl.UTF-8):   %{_pearname} - klasa bazowa do generowania dokumentÃ³w XHTML
 Name:		php-pear-%{_pearname}
 Version:	0.5.0
 Release:	2
@@ -43,29 +43,29 @@ Ideas for use:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Klasa PEAR::HTML_Page2 dostarcza prosty interfejs do generowania stron
 zgodnych z XHTML.
-- wsparcie dla praktycznie wszystkich typów HTML, od HTML 2.0 przez
+- wsparcie dla praktycznie wszystkich typÃ³w HTML, od HTML 2.0 przez
   XHTML 1.1 i XHTML Basic 1.0 do podstawowego wsparcia dla XHTML 2.0
 - wsparcie dla przestrzeni nazw
-- globalna deklaracja jêzyka dokumentu
-- pe³ne wsparcie dla znaczników META
+- globalna deklaracja jÄ™zyka dokumentu
+- peÅ‚ne wsparcie dla znacznikÃ³w META
 - wsparcie dla deklaracji stylu w sekcji head
-- wsparcie dla deklaracji skryptów w sekcji head
-- wsparcie dla stylów i skryptów osadzonych w innych plikach
-- pe³ne wsparcie dla odno¶ników w nag³ówku
-- cia³o dokumentu mo¿e byæ ci±giem znaków, obiektem z metodami toHtml
-  lub toString lub te¿ tablic±
+- wsparcie dla deklaracji skryptÃ³w w sekcji head
+- wsparcie dla stylÃ³w i skryptÃ³w osadzonych w innych plikach
+- peÅ‚ne wsparcie dla odnoÅ›nikÃ³w w nagÅ‚Ã³wku
+- ciaÅ‚o dokumentu moÅ¼e byÄ‡ ciÄ…giem znakÃ³w, obiektem z metodami toHtml
+  lub toString lub teÅ¼ tablicÄ…
 
-Klasa mo¿e byæ wykorzystana do:
-- sprawdzania poprawno¶ci klasy wzglêdem XHTML
+Klasa moÅ¼e byÄ‡ wykorzystana do:
+- sprawdzania poprawnoÅ›ci klasy wzglÄ™dem XHTML
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
@@ -73,7 +73,7 @@ AutoReq:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
