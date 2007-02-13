@@ -5,7 +5,7 @@
 %define		_pearname	HTML_Page2
 
 Summary:	%{_pearname} - base class for XHTML page generation
-Summary(pl.UTF-8):   %{_pearname} - klasa bazowa do generowania dokumentów XHTML
+Summary(pl.UTF-8):	%{_pearname} - klasa bazowa do generowania dokumentów XHTML
 Name:		php-pear-%{_pearname}
 Version:	0.5.0
 Release:	2
@@ -65,7 +65,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 AutoReq:	no
