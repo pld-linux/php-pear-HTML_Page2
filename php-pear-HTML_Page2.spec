@@ -3,21 +3,23 @@
 %define		_subclass	Page2
 %define		_status		beta
 %define		_pearname	HTML_Page2
-
+%define		subver	beta
+%define		rel		1
 Summary:	%{_pearname} - base class for XHTML page generation
 Summary(pl.UTF-8):	%{_pearname} - klasa bazowa do generowania dokumentów XHTML
 Name:		php-pear-%{_pearname}
-Version:	0.5.0
-Release:	4
+Version:	0.6.0
+Release:	0.%{subver}.%{rel}
 License:	PHP License 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}beta.tgz
-# Source0-md5:	a10646c904fafb3a39ecaf6920f0d174
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
+# Source0-md5:	b36f92605067f61e92e55c2c3bcd99cf
 URL:		http://pear.php.net/package/HTML_Page2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2
+Requires:	php-pear-PEAR-core >= 1:1.5.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,19 +81,28 @@ Testy dla PEAR::%{_pearname}.
 %prep
 %pear_package_setup
 
+mv docs/%{_pearname}/examples .
+
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}
+install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_examplesdir}/%{name}-%{version}}
 %pear_package_install
+
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log docs/%{_pearname}/{examples/Page2_NoDoctype.php,examples/Page2_Simple.php,examples/Page2_Complex.php}
+%doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/HTML/Page2.php
 %dir %{php_pear_dir}/HTML/Page2
 %{php_pear_dir}/HTML/Page2/Doctypes.php
 %{php_pear_dir}/HTML/Page2/Namespaces.php
+%{php_pear_dir}/HTML/Page2/Frameset.php
+%dir %{php_pear_dir}/HTML/Page2/Frameset
+%{php_pear_dir}/HTML/Page2/Frameset/Frame.php
+
+%{_examplesdir}/%{name}-%{version}
