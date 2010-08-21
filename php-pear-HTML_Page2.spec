@@ -1,10 +1,8 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		HTML
-%define		_subclass	Page2
 %define		_status		beta
 %define		_pearname	HTML_Page2
 %define		subver	beta
-%define		rel		1
+%define		rel		2
 Summary:	%{_pearname} - base class for XHTML page generation
 Summary(pl.UTF-8):	%{_pearname} - klasa bazowa do generowania dokumentów XHTML
 Name:		php-pear-%{_pearname}
@@ -15,11 +13,10 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
 # Source0-md5:	b36f92605067f61e92e55c2c3bcd99cf
 URL:		http://pear.php.net/package/HTML_Page2/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2
-Requires:	php-pear-PEAR-core >= 1:1.5.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
