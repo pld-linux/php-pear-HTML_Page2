@@ -15,6 +15,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
 URL:		http://pear.php.net/package/HTML_Page2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2
 BuildArch:	noarch
