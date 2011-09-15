@@ -1,21 +1,19 @@
+%define		status		beta
+%define		pearname	HTML_Page2
 %include	/usr/lib/rpm/macros.php
-%define		_status		beta
-%define		_pearname	HTML_Page2
-%define		subver	beta
-%define		rel		2
-Summary:	%{_pearname} - base class for XHTML page generation
-Summary(pl.UTF-8):	%{_pearname} - klasa bazowa do generowania dokumentów XHTML
-Name:		php-pear-%{_pearname}
-Version:	0.6.0
-Release:	0.%{subver}.%{rel}
+Summary:	%{pearname} - base class for XHTML page generation
+Summary(pl.UTF-8):	%{pearname} - klasa bazowa do generowania dokumentów XHTML
+Name:		php-pear-%{pearname}
+Version:	0.6.2
+Release:	1
 License:	PHP License 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
-# Source0-md5:	b36f92605067f61e92e55c2c3bcd99cf
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	a068567f34b22986d8be9333de595b2e
 URL:		http://pear.php.net/package/HTML_Page2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2
 BuildArch:	noarch
@@ -41,7 +39,7 @@ Ideas for use:
 - Use to validate the output of a class for XHTML compliance
 - Quick prototyping using PEAR packages is now a breeze
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Klasa PEAR::HTML_Page2 dostarcza prosty interfejs do generowania stron
@@ -61,25 +59,12 @@ zgodnych z XHTML.
 Klasa może być wykorzystana do:
 - sprawdzania poprawności klasy względem XHTML
 
-Ta klasa ma w PEAR status: %{_status}.
-
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development
-Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
 
-mv docs/%{_pearname}/examples .
+mv docs/%{pearname}/examples .
 
 %install
 rm -rf $RPM_BUILD_ROOT
