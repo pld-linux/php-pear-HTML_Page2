@@ -4,12 +4,12 @@
 Summary:	%{pearname} - base class for XHTML page generation
 Summary(pl.UTF-8):	%{pearname} - klasa bazowa do generowania dokumentów XHTML
 Name:		php-pear-%{pearname}
-Version:	0.6.2
+Version:	0.6.3
 Release:	1
 License:	PHP License 3.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	a068567f34b22986d8be9333de595b2e
+# Source0-md5:	e17df6db5cc52d178e8c50b99aee76eb
 URL:		http://pear.php.net/package/HTML_Page2/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -65,6 +65,7 @@ Ta klasa ma w PEAR status: %{status}.
 %pear_package_setup
 
 mv docs/%{pearname}/examples .
+mv .%{php_pear_dir}/data/HTML_Page2/README .
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -78,7 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log
+%doc install.log README
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/HTML/Page2.php
 %dir %{php_pear_dir}/HTML/Page2
@@ -87,5 +88,4 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/HTML/Page2/Frameset.php
 %dir %{php_pear_dir}/HTML/Page2/Frameset
 %{php_pear_dir}/HTML/Page2/Frameset/Frame.php
-
 %{_examplesdir}/%{name}-%{version}
