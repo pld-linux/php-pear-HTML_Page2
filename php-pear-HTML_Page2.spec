@@ -1,6 +1,5 @@
 %define		status		beta
 %define		pearname	HTML_Page2
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - base class for XHTML page generation
 Summary(pl.UTF-8):	%{pearname} - klasa bazowa do generowania dokumentów XHTML
 Name:		php-pear-%{pearname}
